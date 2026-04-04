@@ -40,6 +40,7 @@ const en = {
     subtext: "Expert advice. Competitive prices. A workshop open 7 days a week.",
     cta1: "View collection",
     cta2: "Workshop →",
+    smallBox: "Come by and we'll take care of your bike — fast and reliably!",
   },
 
   // Trust bar
@@ -82,18 +83,18 @@ const en = {
     Mountainbike: "Mountain Bike",
   },
 
-  // Workshop
+  // About Us
   workshop: {
-    label: "Workshop",
-    headline: "Craftsmanship on",
+    label: "About Us",
+    headline: "Your bike specialist on",
     headlineLine2: "2e Middellandstraat.",
-    body: "Our workshop is open 7 days a week. From a flat tire to a complete e-bike overhaul — all brands, usually within 30 to 60 minutes.",
-    dealTitle: "Maintenance Service",
-    dealDesc: "Chain, gears, tires, brakes, lights — fully inspected.",
-    dealCta: "Book appointment",
-    stat1Label: "Days a week",
-    stat2Label: "Minutes repair",
-    stat3Label: "Products",
+    body: "For years the go-to bike shop in Rotterdam-West. With personal advice, a wide range of bikes, and our own workshop open 7 days a week, we make sure you're always on your way.",
+    dealTitle: "Workshop",
+    dealDesc: "From a flat tire to a complete overhaul — all brands, usually within 30-60 minutes.",
+    dealCta: "Show on the map",
+    stat1Label: "Years of experience",
+    stat2Label: "Happy customers",
+    stat3Label: "Bikes in stock",
   },
 
   // Mega menu
@@ -135,14 +136,28 @@ const en = {
     ],
   },
 
-  // Newsletter
-  newsletter: {
-    label: "Newsletter",
-    headline: "Stay up to date",
-    subtext: "Deals, tips and workshop news. No spam.",
-    placeholder: "Your email address",
-    submit: "Subscribe",
-    privacy: "We respect your privacy.",
+  // Contact
+  contact: {
+    label: "Contact",
+    headline: "Visit us or get in touch",
+    subtext: "We're happy to help — in store, by phone or email.",
+    address: "Address",
+    addressLine1: "2e Middellandstraat 28",
+    addressLine2: "3021 BP Rotterdam",
+    phone: "Phone",
+    email: "Email",
+    hours: "Opening hours",
+    hoursWeekdays: "Mon - Sat: 09:00 - 18:00",
+    hoursSunday: "Sun: 12:00 - 18:00",
+    cta: "Show on the map",
+    formTitle: "Send us a message",
+    formName: "Name",
+    formEmail: "Email address",
+    formMessage: "Your message",
+    formSend: "Send",
+    formNamePlaceholder: "Your name",
+    formEmailPlaceholder: "you@email.com",
+    formMessagePlaceholder: "How can we help you?",
   },
 
   // Footer

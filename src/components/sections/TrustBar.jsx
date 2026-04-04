@@ -14,7 +14,6 @@ export default function TrustBar() {
 
   return (
     <section className={styles.section}>
-      <div className={styles.redLine} />
       <div className="container">
         <div className={styles.row} ref={ref}>
           {keys.map((key, i) => {
@@ -25,14 +24,16 @@ export default function TrustBar() {
                 className={styles.item}
                 style={{
                   opacity: isInView ? 1 : 0,
-                  transform: isInView ? "translateY(0)" : "translateY(24px)",
-                  transition: `opacity 0.5s ease ${i * 0.1}s, transform 0.5s ease ${i * 0.1}s`,
+                  transform: isInView ? "translateY(0)" : "translateY(20px)",
+                  transition: `opacity 0.6s ease ${i * 0.12}s, transform 0.6s ease ${i * 0.12}s`,
                 }}
               >
-                <div className={styles.iconCircle}>
-                  <Icon size={22} />
+                <div className={styles.iconWrap}>
+                  <Icon size={20} strokeWidth={2.2} />
                 </div>
-                <span className={styles.label}>{t.trust[key]}</span>
+                <div className={styles.text}>
+                  <span className={styles.label}>{t.trust[key]}</span>
+                </div>
               </div>
             );
           })}

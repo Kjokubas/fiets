@@ -111,17 +111,16 @@
 .mainShape {
   width: 380px;
   height: 480px;
-  background: linear-gradient(135deg, var(--color-red) 0%, var(--color-red-dark) 100%);
   border-radius: var(--radius-xl);
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: relative;
+  overflow: hidden;
+  border: 2px solid var(--color-red);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4);
 }
 
-.bikeIcon {
-  color: white;
-  opacity: 0.2;
+.heroImage {
+  object-fit: cover;
+  object-position: center;
 }
 
 .smallShape {
@@ -133,6 +132,22 @@
   background: var(--color-gray-800);
   border-radius: var(--radius-lg);
   transform: rotate(2deg);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.smallShapeText {
+  color: var(--color-white);
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: var(--text-base);
+  font-weight: 500;
+  line-height: 1.4;
+  text-align: center;
+  opacity: 0.85;
 }
 
 .scrollIndicator {

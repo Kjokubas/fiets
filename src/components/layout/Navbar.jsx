@@ -66,13 +66,6 @@ export default function Navbar() {
             <button className={styles.iconBtn} aria-label={t.nav.search}>
               <Search size={20} />
             </button>
-            <button className={styles.iconBtn} aria-label={t.nav.cart}>
-              <ShoppingBag size={20} />
-              <span className={styles.cartBadge}>0</span>
-            </button>
-            <div className={styles.ctaDesktop}>
-              <Button variant="primary" size="sm">{t.nav.appointment}</Button>
-            </div>
             <button
               className={styles.menuBtn}
               aria-label="Menu"

@@ -1,5 +1,4 @@
-import { Plus_Jakarta_Sans, Playfair_Display } from "next/font/google";
-import Providers from "@/components/layout/Providers";
+import { Plus_Jakarta_Sans, Playfair_Display, Dancing_Script } from "next/font/google";
 import "./globals.css";
 import "./animations.css";
 
@@ -7,6 +6,13 @@ const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"],
   variable: "--font-display",
+  display: "swap",
+});
+
+const dancingScript = Dancing_Script({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-cursive",
   display: "swap",
 });
 
@@ -58,9 +64,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="nl" className={`${plusJakartaSans.variable} ${playfairDisplay.variable}`}>
-      <body>
-        <Providers>{children}</Providers>
+    <html lang="nl" className={`${plusJakartaSans.variable} ${playfairDisplay.variable} ${dancingScript.variable}`}>
+      <body suppressHydrationWarning>
+        {children}
       </body>
     </html>
   );

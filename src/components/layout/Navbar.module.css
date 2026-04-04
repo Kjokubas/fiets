@@ -6,13 +6,15 @@
   background: rgba(250, 250, 250, 1);
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
-  transition: transform 350ms var(--ease-out-expo), box-shadow var(--transition-base), border-color var(--transition-base);
+  transition: transform 400ms var(--ease-out-expo), box-shadow var(--transition-base), border-color var(--transition-base), clip-path 400ms var(--ease-out-expo);
   border-bottom: 1px solid transparent;
-  will-change: transform;
+  clip-path: inset(0 0 0 0 round 0);
+  will-change: transform, clip-path;
 }
 
 .hidden {
   transform: translateY(-100%);
+  clip-path: inset(0 10% 0 10% round 0 0 50% 50%);
 }
 
 .scrolled {

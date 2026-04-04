@@ -22,6 +22,7 @@ export default function Categories() {
 
   return (
     <section className={styles.section}>
+      <div className={styles.dots} aria-hidden="true" />
       <div className="container">
         <div className={styles.header}>
           <SectionLabel>{t.categories.label}</SectionLabel>

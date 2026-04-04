@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext, useState, useCallback, useEffect } from "react";
+import { createContext, useContext } from "react";
 import nl from "./nl";
 import en from "./en";
 
@@ -8,26 +8,11 @@ const translations = { nl, en };
 
 const LanguageContext = createContext();
 
-export function LanguageProvider({ children }) {
-  const [locale, setLocale] = useState("nl");
-
-  useEffect(() => {
-    const saved = localStorage.getItem("lang");
-    if (saved && translations[saved]) {
-      setLocale(saved);
-    }
-  }, []);
-
-  const switchLocale = useCallback((lang) => {
-    setLocale(lang);
-    localStorage.setItem("lang", lang);
-    document.documentElement.lang = lang;
-  }, []);
-
-  const t = translations[locale];
+export function LanguageProvider({ locale = "nl", children }) {
+  const t = translations[locale] || translations.nl;
 
   return (
-    <LanguageContext.Provider value={{ locale, switchLocale, t }}>
+    <LanguageContext.Provider value={{ locale, t }}>
       {children}
     </LanguageContext.Provider>
   );

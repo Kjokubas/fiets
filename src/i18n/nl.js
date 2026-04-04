@@ -40,6 +40,7 @@ const nl = {
     subtext: "Deskundig advies. Scherpe prijzen. Een werkplaats die 7 dagen per week draait.",
     cta1: "Bekijk collectie",
     cta2: "Werkplaats →",
+    smallBox: "Kom langs en wij zorgen snel en betrouwbaar voor jouw fiets!",
   },
 
   // Trust bar
@@ -82,18 +83,18 @@ const nl = {
     Mountainbike: "Mountainbike",
   },
 
-  // Workshop
+  // About Us
   workshop: {
-    label: "Werkplaats",
-    headline: "Vakmanschap op de",
+    label: "Over Ons",
+    headline: "Uw fietsspecialist op de",
     headlineLine2: "2e Middellandstraat.",
-    body: "Onze werkplaats is 7 dagen per week geopend. Van een lekke band tot een complete e-bike revisie — alle merken, vaak binnen 30 tot 60 minuten.",
-    dealTitle: "Onderhoudsbeurt",
-    dealDesc: "Ketting, versnelling, banden, remmen, verlichting — compleet nagekeken.",
-    dealCta: "Afspraak maken",
-    stat1Label: "Dagen per week",
-    stat2Label: "Minuten reparatie",
-    stat3Label: "Producten",
+    body: "Al jaren dé fietsenwinkel van Rotterdam-West. Met persoonlijk advies, een breed assortiment en een eigen werkplaats die 7 dagen per week draait, zorgen wij ervoor dat u altijd goed op weg bent.",
+    dealTitle: "Werkplaats",
+    dealDesc: "Van een lekke band tot een complete revisie — alle merken, vaak binnen 30-60 minuten.",
+    dealCta: "Toon op de kaart",
+    stat1Label: "Jaren ervaring",
+    stat2Label: "Tevreden klanten",
+    stat3Label: "Fietsen op voorraad",
   },
 
   // Mega menu
@@ -135,14 +136,28 @@ const nl = {
     ],
   },
 
-  // Newsletter
-  newsletter: {
-    label: "Nieuwsbrief",
-    headline: "Blijf op de hoogte",
-    subtext: "Aanbiedingen, tips en werkplaatsnieuws. Geen spam.",
-    placeholder: "Uw e-mailadres",
-    submit: "Aanmelden",
-    privacy: "We respecteren uw privacy.",
+  // Contact
+  contact: {
+    label: "Contact",
+    headline: "Kom langs of neem contact op",
+    subtext: "We helpen u graag verder — in de winkel, telefonisch of per e-mail.",
+    address: "Adres",
+    addressLine1: "2e Middellandstraat 28",
+    addressLine2: "3021 BP Rotterdam",
+    phone: "Telefoon",
+    email: "E-mail",
+    hours: "Openingstijden",
+    hoursWeekdays: "Ma - Za: 09:00 - 18:00",
+    hoursSunday: "Zo: 12:00 - 18:00",
+    cta: "Toon op de kaart",
+    formTitle: "Stuur ons een bericht",
+    formName: "Naam",
+    formEmail: "E-mailadres",
+    formMessage: "Uw bericht",
+    formSend: "Versturen",
+    formNamePlaceholder: "Uw naam",
+    formEmailPlaceholder: "uw@email.nl",
+    formMessagePlaceholder: "Waar kunnen we u mee helpen?",
   },
 
   // Footer

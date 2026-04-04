@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Bike, ChevronDown } from "lucide-react";
+import Image from "next/image";
+import { ChevronDown } from "lucide-react";
 import SectionLabel from "@/components/ui/SectionLabel";
 import Button from "@/components/ui/Button";
 import useScrollPosition from "@/hooks/useScrollPosition";
@@ -91,9 +92,17 @@ export default function Hero() {
           variants={scaleIn}
         >
           <div className={styles.mainShape}>
-            <Bike size={140} className={styles.bikeIcon} />
+            <Image
+              src="/unnamed.webp"
+              alt="Fietsspecialist Rotterdam"
+              fill
+              className={styles.heroImage}
+              priority
+            />
           </div>
-          <div className={styles.smallShape} />
+          <div className={styles.smallShape}>
+            <p className={styles.smallShapeText}>{t.hero.smallBox}</p>
+          </div>
         </motion.div>
       </div>
 

@@ -2,6 +2,6 @@
 
 import { LanguageProvider } from "@/i18n/LanguageContext";
 
-export default function Providers({ children }) {
-  return <LanguageProvider>{children}</LanguageProvider>;
+export default function Providers({ locale, children }) {
+  return <LanguageProvider locale={locale}>{children}</LanguageProvider>;
 }

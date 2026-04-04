@@ -12,7 +12,7 @@ export default function ProductCard({ bike }) {
   return (
     <div className={styles.card}>
       <div className={styles.imageArea}>
-        <Bike size={56} className={styles.icon} />
+        <Bike size={72} className={styles.icon} />
       </div>
       <div className={styles.content}>
         <span className={styles.brand}>{bike.brand}</span>

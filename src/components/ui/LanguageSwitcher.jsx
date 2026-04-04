@@ -1,29 +1,30 @@
 "use client";
 
+import Link from "next/link";
 import { useLanguage } from "@/i18n/LanguageContext";
-import styles from "./LanguageSwitcher.module.css";
 import clsx from "clsx";
+import styles from "./LanguageSwitcher.module.css";
 
 export default function LanguageSwitcher() {
-  const { locale, switchLocale } = useLanguage();
+  const { locale } = useLanguage();
 
   return (
     <div className={styles.switcher}>
-      <button
+      <Link
+        href="/nl"
         className={clsx(styles.btn, locale === "nl" && styles.active)}
-        onClick={() => switchLocale("nl")}
         aria-label="Nederlands"
       >
         NL
-      </button>
+      </Link>
       <span className={styles.divider}>/</span>
-      <button
+      <Link
+        href="/en"
         className={clsx(styles.btn, locale === "en" && styles.active)}
-        onClick={() => switchLocale("en")}
         aria-label="English"
       >
         EN
-      </button>
+      </Link>
     </div>
   );
 }
