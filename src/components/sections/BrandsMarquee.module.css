@@ -1,0 +1,46 @@
+.section {
+  background: var(--color-white);
+  padding: var(--space-xl) 0;
+  border-top: 1px solid var(--color-border-light);
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.marquee {
+  overflow: hidden;
+}
+
+.marquee:hover .track {
+  animation-play-state: paused;
+}
+
+.marquee:hover .brand {
+  color: var(--color-gray-500);
+}
+
+.track {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  animation: marqueeScroll 30s linear infinite;
+  will-change: transform;
+}
+
+.item {
+  display: inline-flex;
+  align-items: center;
+  gap: 24px;
+  padding: 0 24px;
+}
+
+.brand {
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: var(--color-gray-200);
+  transition: color var(--transition-base);
+}
+
+.dot {
+  color: var(--color-red);
+  opacity: 0.3;
+  font-size: var(--text-xl);
+}

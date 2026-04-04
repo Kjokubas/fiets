@@ -1,0 +1,170 @@
+.hero {
+  width: 100%;
+  height: 80vh;
+  min-height: 550px;
+  max-height: 800px;
+  background: var(--color-bg-dark);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+  animation: gridDrift 8s linear infinite;
+  pointer-events: none;
+  mask-image: radial-gradient(ellipse 85% 80% at center, black 50%, transparent 85%);
+  -webkit-mask-image: radial-gradient(ellipse 85% 80% at center, black 50%, transparent 85%);
+}
+
+@keyframes gridDrift {
+  0%   { background-position: 0px 0px, 0px 0px; }
+  100% { background-position: -60px -60px, -60px -60px; }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+  position: relative;
+  z-index: 1;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0;
+  padding-right: 40px;
+}
+
+.line {
+  width: 64px;
+  height: 3px;
+  background: var(--color-red);
+  margin-top: 20px;
+  transform-origin: left;
+}
+
+.headline {
+  font-family: var(--font-serif);
+  font-size: var(--text-hero);
+  font-weight: 700;
+  color: var(--color-white);
+  line-height: 1.08;
+  margin-top: 24px;
+  letter-spacing: -0.02em;
+}
+
+.red {
+  background: linear-gradient(90deg, #D72638, #FF4D6A, #FF8A80, #FF4D6A, #D72638);
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientShift 4s ease-in-out infinite;
+}
+
+@keyframes gradientShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.subtext {
+  font-size: var(--text-lg);
+  color: var(--color-text-on-dark);
+  opacity: 0.65;
+  max-width: 440px;
+  line-height: 1.7;
+  margin-top: 20px;
+}
+
+.ctas {
+  display: flex;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.glowBtn {
+  animation: glowPulse 3s ease-in-out infinite;
+  animation-delay: 3s;
+}
+
+.visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  animation: float 5s ease-in-out infinite;
+  will-change: transform;
+}
+
+.mainShape {
+  width: 380px;
+  height: 480px;
+  background: linear-gradient(135deg, var(--color-red) 0%, var(--color-red-dark) 100%);
+  border-radius: var(--radius-xl);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.bikeIcon {
+  color: white;
+  opacity: 0.2;
+}
+
+.smallShape {
+  position: absolute;
+  bottom: 10%;
+  right: 5%;
+  width: 200px;
+  height: 260px;
+  background: var(--color-gray-800);
+  border-radius: var(--radius-lg);
+  transform: rotate(2deg);
+}
+
+.scrollIndicator {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--color-white);
+  animation: bounce 2s infinite;
+  transition: opacity var(--transition-base);
+}
+
+@media (max-width: 1023px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .visual {
+    display: none;
+  }
+
+  .content {
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero {
+    min-height: 600px;
+  }
+
+  .ctas {
+    flex-direction: column;
+  }
+}

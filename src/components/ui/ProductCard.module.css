@@ -1,0 +1,102 @@
+.card {
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+  will-change: transform;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+.imageArea {
+  aspect-ratio: 3 / 2;
+  background: linear-gradient(145deg, var(--color-gray-50) 0%, var(--color-gray-100) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--transition-slow);
+}
+
+.icon {
+  color: var(--color-gray-200);
+  transition: color var(--transition-slow);
+}
+
+.card:hover .imageArea {
+  background: linear-gradient(145deg, var(--color-red-light) 0%, #FDE8EA 100%);
+}
+
+.card:hover .icon {
+  color: var(--color-red);
+  opacity: 0.4;
+}
+
+.content {
+  padding: 20px;
+}
+
+.brand {
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--color-text-light);
+}
+
+.name {
+  font-size: var(--text-base);
+  font-weight: 700;
+  color: var(--color-text);
+  margin-top: 6px;
+  letter-spacing: -0.01em;
+}
+
+.category {
+  display: inline-block;
+  font-size: var(--text-xs);
+  background: var(--color-surface);
+  color: var(--color-text-muted);
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  margin-top: 8px;
+}
+
+.priceRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 14px;
+}
+
+.price {
+  font-size: var(--text-xl);
+  font-weight: 800;
+  color: var(--color-red);
+}
+
+.originalPrice {
+  font-size: var(--text-sm);
+  color: var(--color-text-light);
+  text-decoration: line-through;
+}
+
+.stock {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 10px;
+  font-size: var(--text-xs);
+  color: var(--color-success);
+  font-weight: 500;
+}
+
+.stockDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-success);
+}

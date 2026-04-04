@@ -1,0 +1,156 @@
+.section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 600px;
+}
+
+.left {
+  background: var(--color-bg-dark);
+  padding: var(--space-4xl);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.headline {
+  font-size: var(--text-3xl);
+  color: var(--color-white);
+  max-width: 460px;
+  margin-top: 16px;
+}
+
+.body {
+  font-size: var(--text-base);
+  color: rgba(255, 255, 255, 0.6);
+  max-width: 420px;
+  line-height: 1.75;
+  margin-top: 20px;
+}
+
+.dealCard {
+  margin-top: 36px;
+  background: var(--color-bg-dark-alt);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-md);
+  padding: 28px;
+  padding-left: 32px;
+  position: relative;
+}
+
+.dealAccent {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: var(--color-red);
+  border-radius: 4px 0 0 4px;
+}
+
+.dealHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dealTitle {
+  font-weight: 600;
+  color: var(--color-white);
+}
+
+.dealPricing {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.dealPrice {
+  color: var(--color-red);
+  font-size: var(--text-xl);
+  font-weight: 800;
+}
+
+.dealOld {
+  color: var(--color-text-light);
+  font-size: var(--text-sm);
+  text-decoration: line-through;
+}
+
+.dealDesc {
+  font-size: var(--text-sm);
+  color: rgba(255, 255, 255, 0.45);
+  margin-top: 8px;
+  margin-bottom: 20px;
+}
+
+.right {
+  background: var(--color-red);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.bgIcon {
+  position: absolute;
+  color: white;
+  opacity: 0.06;
+  transform: rotate(20deg);
+}
+
+.statsStack {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  position: relative;
+  z-index: 1;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  will-change: transform, opacity;
+}
+
+.statNumber {
+  font-size: var(--text-4xl);
+  font-weight: 800;
+  color: var(--color-white);
+}
+
+.statLabel {
+  font-size: var(--text-sm);
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-top: 4px;
+}
+
+@media (max-width: 1023px) {
+  .section {
+    grid-template-columns: 1fr;
+  }
+
+  .left {
+    padding: 40px var(--space-lg);
+  }
+
+  .right {
+    padding: 40px var(--space-lg);
+  }
+
+  .statsStack {
+    flex-direction: row;
+    gap: 32px;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .bgIcon {
+    width: 200px;
+    height: 200px;
+  }
+}
