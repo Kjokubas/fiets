@@ -26,6 +26,7 @@ export default function Workshop() {
             {t.workshop.headline}<br />{t.workshop.headlineLine2}
           </h2>
           <p className={styles.body}>{t.workshop.body}</p>
+          <Button variant="secondary" size="md">{t.workshop.readMore}</Button>
 
           <div className={styles.dealCard}>
             <div className={styles.dealHeader}>

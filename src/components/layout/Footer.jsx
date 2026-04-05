@@ -44,15 +44,6 @@ export default function Footer() {
           <div className={styles.brandCol}>
             <Logo variant="light" />
             <p className={styles.description}>{t.footer.description}</p>
-            <a
-              href="https://instagram.com/fietsspecialistrotterdam"
-              className={styles.social}
-              aria-label="Instagram"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <InstagramIcon />
-            </a>
           </div>
 
           <div>

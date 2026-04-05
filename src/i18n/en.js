@@ -39,8 +39,8 @@ const en = {
     headline: "The {red}perfect{/red} bike for every Rotterdammer.",
     subtext: "Expert advice. Competitive prices. A workshop open 7 days a week.",
     cta1: "View collection",
-    cta2: "Workshop →",
-    smallBox: "Come by and we'll take care of your bike — fast and reliably!",
+    cta2: "Workshop",
+    smallBox: "Come by and we'll take care of your bike, fast and reliably!",
   },
 
   // Trust bar
@@ -55,7 +55,7 @@ const en = {
   categories: {
     label: "Collection",
     headline: "Find your bike",
-    subtitle: "From city bikes to e-bikes — the right choice for every Rotterdammer.",
+    subtitle: "From city bikes to e-bikes, the right choice for every Rotterdammer.",
     view: "View",
     items: {
       stadsfietsen: { name: "City Bikes", description: "Daily comfort through the city" },
@@ -71,7 +71,7 @@ const en = {
   featured: {
     label: "Featured",
     headline: "Popular bikes",
-    viewAll: "View all →",
+    viewAll: "View all",
     inStock: "In stock",
   },
 
@@ -90,8 +90,9 @@ const en = {
     headlineLine2: "2e Middellandstraat.",
     body: "For years the go-to bike shop in Rotterdam-West. With personal advice, a wide range of bikes, and our own workshop open 7 days a week, we make sure you're always on your way.",
     dealTitle: "Workshop",
-    dealDesc: "From a flat tire to a complete overhaul — all brands, usually within 30-60 minutes.",
+    dealDesc: "From a flat tire to a complete overhaul, all brands, usually within 30-60 minutes.",
     dealCta: "Show on the map",
+    readMore: "Read more",
     stat1Label: "Years of experience",
     stat2Label: "Happy customers",
     stat3Label: "Bikes in stock",
@@ -101,7 +102,7 @@ const en = {
   megaMenu: {
     workshopTitle: "Workshop",
     workshopSub: "Maintenance from €59",
-    workshopCta: "Book appointment →",
+    workshopCta: "Book appointment",
   },
 
   // Stats counter
@@ -117,6 +118,7 @@ const en = {
   testimonials: {
     label: "Customer Reviews",
     headline: "What Rotterdam says",
+    readAll: "Read all reviews",
     items: [
       {
         quote: "Bike repaired within half an hour. Friendly staff and a fair price. I always come back here!",
@@ -140,7 +142,7 @@ const en = {
   contact: {
     label: "Contact",
     headline: "Visit us or get in touch",
-    subtext: "We're happy to help — in store, by phone or email.",
+    subtext: "We're happy to help, in store, by phone or email.",
     address: "Address",
     addressLine1: "2e Middellandstraat 28",
     addressLine2: "3021 BP Rotterdam",

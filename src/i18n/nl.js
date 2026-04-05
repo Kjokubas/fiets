@@ -39,7 +39,7 @@ const nl = {
     headline: "De {red}perfecte{/red} fiets voor élke Rotterdammer.",
     subtext: "Deskundig advies. Scherpe prijzen. Een werkplaats die 7 dagen per week draait.",
     cta1: "Bekijk collectie",
-    cta2: "Werkplaats →",
+    cta2: "Werkplaats",
     smallBox: "Kom langs en wij zorgen snel en betrouwbaar voor jouw fiets!",
   },
 
@@ -55,7 +55,7 @@ const nl = {
   categories: {
     label: "Assortiment",
     headline: "Vind jouw fiets",
-    subtitle: "Van stadsfietsen tot e-bikes — voor elke Rotterdammer de juiste keuze.",
+    subtitle: "Van stadsfietsen tot e-bikes, voor elke Rotterdammer de juiste keuze.",
     view: "Bekijk",
     items: {
       stadsfietsen: { name: "Stadsfietsen", description: "Dagelijks comfort door de stad" },
@@ -71,7 +71,7 @@ const nl = {
   featured: {
     label: "Uitgelicht",
     headline: "Populaire fietsen",
-    viewAll: "Bekijk alles →",
+    viewAll: "Bekijk alles",
     inStock: "Op voorraad",
   },
 
@@ -90,8 +90,9 @@ const nl = {
     headlineLine2: "2e Middellandstraat.",
     body: "Al jaren dé fietsenwinkel van Rotterdam-West. Met persoonlijk advies, een breed assortiment en een eigen werkplaats die 7 dagen per week draait, zorgen wij ervoor dat u altijd goed op weg bent.",
     dealTitle: "Werkplaats",
-    dealDesc: "Van een lekke band tot een complete revisie — alle merken, vaak binnen 30-60 minuten.",
+    dealDesc: "Van een lekke band tot een complete revisie, alle merken, vaak binnen 30-60 minuten.",
     dealCta: "Toon op de kaart",
+    readMore: "Lees meer",
     stat1Label: "Jaren ervaring",
     stat2Label: "Tevreden klanten",
     stat3Label: "Fietsen op voorraad",
@@ -101,7 +102,7 @@ const nl = {
   megaMenu: {
     workshopTitle: "Werkplaats",
     workshopSub: "Onderhoudsbeurt vanaf €59",
-    workshopCta: "Afspraak maken →",
+    workshopCta: "Afspraak maken",
   },
 
   // Stats counter
@@ -117,6 +118,7 @@ const nl = {
   testimonials: {
     label: "Klantbeoordelingen",
     headline: "Wat Rotterdam zegt",
+    readAll: "Lees alle reviews",
     items: [
       {
         quote: "Fiets binnen een half uur gerepareerd. Vriendelijk personeel en eerlijke prijs. Ik kom hier altijd terug!",
@@ -140,7 +142,7 @@ const nl = {
   contact: {
     label: "Contact",
     headline: "Kom langs of neem contact op",
-    subtext: "We helpen u graag verder — in de winkel, telefonisch of per e-mail.",
+    subtext: "We helpen u graag verder, in de winkel, telefonisch of per e-mail.",
     address: "Adres",
     addressLine1: "2e Middellandstraat 28",
     addressLine2: "3021 BP Rotterdam",
