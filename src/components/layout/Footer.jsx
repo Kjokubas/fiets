@@ -2,7 +2,9 @@
 
 import Link from "next/link";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import clsx from "clsx";
 import Logo from "@/components/ui/Logo";
+import useInView from "@/hooks/useInView";
 import { useLanguage } from "@/i18n/LanguageContext";
 import styles from "./Footer.module.css";
 
@@ -27,6 +29,7 @@ const assortimentLinks = [
 
 export default function Footer() {
   const { t } = useLanguage();
+  const { ref, isInView } = useInView();
 
   const serviceLinks = [
     { label: t.footer.werkplaats, href: "/werkplaats" },
@@ -40,13 +43,13 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={styles.accentLine} />
       <div className={`container ${styles.inner}`}>
-        <div className={styles.grid}>
-          <div className={styles.brandCol}>
+        <div className={styles.grid} ref={ref}>
+          <div className={clsx(styles.brandCol, styles.colAnim, isInView && styles.colVisible)} style={{ animationDelay: "0s" }}>
             <Logo variant="light" />
             <p className={styles.description}>{t.footer.description}</p>
           </div>
 
-          <div>
+          <div className={clsx(styles.colAnim, isInView && styles.colVisible)} style={{ animationDelay: "0.1s" }}>
             <h4 className={styles.colHeader}>{t.footer.assortiment}</h4>
             {assortimentLinks.map((item) => (
               <Link key={item.href} href={item.href} className={styles.footerLink}>
@@ -55,7 +58,7 @@ export default function Footer() {
             ))}
           </div>
 
-          <div>
+          <div className={clsx(styles.colAnim, isInView && styles.colVisible)} style={{ animationDelay: "0.2s" }}>
             <h4 className={styles.colHeader}>{t.footer.service}</h4>
             {serviceLinks.map((item) => (
               <Link key={item.label} href={item.href} className={styles.footerLink}>
@@ -64,7 +67,7 @@ export default function Footer() {
             ))}
           </div>
 
-          <div>
+          <div className={clsx(styles.colAnim, isInView && styles.colVisible)} style={{ animationDelay: "0.3s" }}>
             <h4 className={styles.colHeader}>{t.footer.contactHeader}</h4>
             <div className={styles.contactList}>
               <div className={styles.contactItem}>

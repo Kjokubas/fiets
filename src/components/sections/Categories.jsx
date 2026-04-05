@@ -1,5 +1,6 @@
 "use client";
 
+import clsx from "clsx";
 import SectionLabel from "@/components/ui/SectionLabel";
 import CategoryCard from "@/components/ui/CategoryCard";
 import useInView from "@/hooks/useInView";
@@ -25,7 +26,7 @@ export default function Categories() {
       <div className={styles.dots} aria-hidden="true" />
       <div className="container">
         <div className={styles.header}>
-          <SectionLabel>{t.categories.label}</SectionLabel>
+          <SectionLabel animated isInView={isInView}>{t.categories.label}</SectionLabel>
           <h2 className={styles.headline}>{t.categories.headline}</h2>
           <p className={styles.subtitle}>{t.categories.subtitle}</p>
         </div>
@@ -40,11 +41,8 @@ export default function Categories() {
             return (
               <div
                 key={cat.id}
-                style={{
-                  opacity: isInView ? 1 : 0,
-                  transform: isInView ? "scale(1)" : "scale(0.95)",
-                  transition: `opacity 0.4s ease ${i * 0.08}s, transform 0.4s ease ${i * 0.08}s`,
-                }}
+                className={clsx(styles.cardAnim, isInView && styles.cardVisible)}
+                style={{ animationDelay: `${i * 0.08}s` }}
               >
                 <CategoryCard category={translatedCat} viewLabel={t.categories.view} />
               </div>

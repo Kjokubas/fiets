@@ -1,6 +1,7 @@
 "use client";
 
 import { MapPin, Phone, Mail, Clock, ArrowRight, Send } from "lucide-react";
+import clsx from "clsx";
 import SectionLabel from "@/components/ui/SectionLabel";
 import useInView from "@/hooks/useInView";
 import { useLanguage } from "@/i18n/LanguageContext";
@@ -39,7 +40,7 @@ export default function ContactSection() {
     <section className={styles.section}>
       <div className="container">
         <div className={styles.header}>
-          <SectionLabel>{t.contact.label}</SectionLabel>
+          <SectionLabel animated isInView={isInView}>{t.contact.label}</SectionLabel>
           <h2 className={styles.headline}>{t.contact.headline}</h2>
           <p className={styles.subtext}>{t.contact.subtext}</p>
         </div>
@@ -51,12 +52,8 @@ export default function ContactSection() {
                 const Icon = item.icon;
                 const card = (
                   <div
-                    className={styles.card}
-                    style={{
-                      opacity: isInView ? 1 : 0,
-                      transform: isInView ? "translateY(0)" : "translateY(20px)",
-                      transition: `opacity 0.5s ease ${i * 0.1}s, transform 0.5s ease ${i * 0.1}s`,
-                    }}
+                    className={clsx(styles.card, styles.cardAnim, isInView && styles.cardVisible)}
+                    style={{ animationDelay: `${i * 0.1}s` }}
                   >
                     <div className={styles.iconWrap}>
                       <Icon size={18} strokeWidth={2} />
@@ -94,12 +91,8 @@ export default function ContactSection() {
           </div>
 
           <div
-            className={styles.right}
-            style={{
-              opacity: isInView ? 1 : 0,
-              transform: isInView ? "translateY(0)" : "translateY(20px)",
-              transition: "opacity 0.6s ease 0.2s, transform 0.6s ease 0.2s",
-            }}
+            className={clsx(styles.right, styles.formAnim, isInView && styles.formVisible)}
+            style={{ animationDelay: "0.2s" }}
           >
             <h3 className={styles.formTitle}>{t.contact.formTitle}</h3>
             <form className={styles.form} onSubmit={(e) => e.preventDefault()}>

@@ -1,5 +1,6 @@
 "use client";
 
+import clsx from "clsx";
 import SectionLabel from "@/components/ui/SectionLabel";
 import Button from "@/components/ui/Button";
 import ProductCard from "@/components/ui/ProductCard";
@@ -17,7 +18,7 @@ export default function FeaturedBikes() {
       <div className="container">
         <div className={styles.header}>
           <div>
-            <SectionLabel>{t.featured.label}</SectionLabel>
+            <SectionLabel animated isInView={isInView}>{t.featured.label}</SectionLabel>
             <h2 className={styles.headline}>{t.featured.headline}</h2>
           </div>
           <Button variant="outline" size="sm">{t.featured.viewAll}</Button>
@@ -26,11 +27,8 @@ export default function FeaturedBikes() {
           {featuredBikes.map((bike, i) => (
             <div
               key={bike.id}
-              style={{
-                opacity: isInView ? 1 : 0,
-                transform: isInView ? "translateY(0)" : "translateY(24px)",
-                transition: `opacity 0.5s ease ${i * 0.1}s, transform 0.5s ease ${i * 0.1}s`,
-              }}
+              className={clsx(styles.cardAnim, isInView && styles.cardVisible)}
+              style={{ animationDelay: `${i * 0.1}s` }}
             >
               <ProductCard bike={bike} />
             </div>

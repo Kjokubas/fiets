@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import clsx from "clsx";
 import SectionLabel from "@/components/ui/SectionLabel";
 import Button from "@/components/ui/Button";
 import useInView from "@/hooks/useInView";
@@ -20,9 +21,9 @@ export default function Workshop() {
 
   return (
     <section className={styles.section}>
-      <div className={styles.grid}>
-        <div className={styles.content}>
-          <SectionLabel variant="light">{t.workshop.label}</SectionLabel>
+      <div className={styles.grid} ref={ref}>
+        <div className={clsx(styles.content, styles.contentAnim, isInView && styles.contentVisible)}>
+          <SectionLabel variant="light" animated isInView={isInView}>{t.workshop.label}</SectionLabel>
           <h2 className={styles.headline}>
             {t.workshop.headline}<br />{t.workshop.headlineLine2}
           </h2>
@@ -32,8 +33,8 @@ export default function Workshop() {
           </Link>
         </div>
 
-        <div className={styles.visual} ref={ref}>
-          <div className={styles.imageCard}>
+        <div className={clsx(styles.visual, styles.visualAnim, isInView && styles.visualVisible)}>
+          <div className={clsx(styles.imageCard, styles.imageAnim, isInView && styles.imageVisible)}>
             <Image
               src="/unnamed (1).webp"
               alt="Fietsspecialist Rotterdam"
@@ -45,12 +46,8 @@ export default function Workshop() {
             {stats.map((stat, i) => (
               <div
                 key={stat.label}
-                className={styles.stat}
-                style={{
-                  opacity: isInView ? 1 : 0,
-                  transform: isInView ? "translateY(0)" : "translateY(24px)",
-                  transition: `opacity 0.5s ease ${i * 0.2}s, transform 0.5s ease ${i * 0.2}s`,
-                }}
+                className={clsx(styles.stat, styles.statAnim, isInView && styles.statVisible)}
+                style={{ animationDelay: `${0.4 + i * 0.15}s` }}
               >
                 <span className={styles.statNumber}>{stat.number}</span>
                 <span className={styles.statLabel}>{stat.label}</span>

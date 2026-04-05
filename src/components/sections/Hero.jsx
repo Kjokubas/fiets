@@ -10,7 +10,7 @@ import { useLanguage } from "@/i18n/LanguageContext";
 import styles from "./Hero.module.css";
 
 const fadeInUp = {
-  hidden: { opacity: 0, y: 24 },
+  hidden: { opacity: 0, y: 32 },
   visible: (delay) => ({
     opacity: 1,
     y: 0,

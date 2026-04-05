@@ -1,6 +1,7 @@
 "use client";
 
 import { Wrench, Timer, CreditCard, Shield } from "lucide-react";
+import clsx from "clsx";
 import useInView from "@/hooks/useInView";
 import { useLanguage } from "@/i18n/LanguageContext";
 import styles from "./TrustBar.module.css";
@@ -21,12 +22,8 @@ export default function TrustBar() {
             return (
               <div
                 key={key}
-                className={styles.item}
-                style={{
-                  opacity: isInView ? 1 : 0,
-                  transform: isInView ? "translateY(0)" : "translateY(20px)",
-                  transition: `opacity 0.6s ease ${i * 0.12}s, transform 0.6s ease ${i * 0.12}s`,
-                }}
+                className={clsx(styles.item, styles.animItem, isInView && styles.animVisible)}
+                style={{ animationDelay: `${i * 0.12}s` }}
               >
                 <div className={styles.iconWrap}>
                   <Icon size={20} strokeWidth={2.2} />

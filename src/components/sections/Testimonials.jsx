@@ -2,15 +2,18 @@
 
 import { useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import clsx from "clsx";
 import SectionLabel from "@/components/ui/SectionLabel";
 import Button from "@/components/ui/Button";
 import TestimonialCard from "@/components/ui/TestimonialCard";
+import useInView from "@/hooks/useInView";
 import { testimonials } from "@/data/testimonials";
 import { useLanguage } from "@/i18n/LanguageContext";
 import styles from "./Testimonials.module.css";
 
 export default function Testimonials() {
   const scrollRef = useRef(null);
+  const { ref, isInView } = useInView();
   const { t } = useLanguage();
 
   const scroll = (direction) => {
@@ -27,7 +30,7 @@ export default function Testimonials() {
       <div className="container">
         <div className={styles.header}>
           <div>
-            <SectionLabel variant="light">{t.testimonials.label}</SectionLabel>
+            <SectionLabel variant="light" animated isInView={isInView}>{t.testimonials.label}</SectionLabel>
             <h2 className={styles.headline}>{t.testimonials.headline}</h2>
           </div>
         </div>
@@ -40,10 +43,10 @@ export default function Testimonials() {
           </button>
         </div>
       </div>
-      <div className={styles.trackWrapper}>
+      <div className={styles.trackWrapper} ref={ref}>
         <div className={styles.track} ref={scrollRef}>
-          {testimonials.map((item) => (
-            <div key={item.id} className={styles.slide}>
+          {testimonials.map((item, i) => (
+            <div key={item.id} className={clsx(styles.slide, styles.slideAnim, isInView && styles.slideVisible)} style={{ animationDelay: `${Math.min(i, 4) * 0.12}s` }}>
               <TestimonialCard testimonial={item} />
             </div>
           ))}
