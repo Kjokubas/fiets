@@ -1,0 +1,35 @@
+.fab {
+  display: none;
+  position: fixed;
+  bottom: 24px;
+  right: 20px;
+  z-index: 90;
+  background-color: var(--color-red);
+  color: var(--color-white);
+  border-radius: var(--radius-full);
+  padding: 14px 22px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-sm);
+  text-decoration: none;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 16px rgba(215, 38, 56, 0.4), 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all var(--transition-base);
+}
+
+.fab:hover,
+.fab:active {
+  background-color: var(--color-red-dark);
+  transform: scale(1.05);
+}
+
+.label {
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 768px) {
+  .fab {
+    display: inline-flex;
+  }
+}

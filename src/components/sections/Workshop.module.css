@@ -69,56 +69,13 @@
   z-index: 1;
 }
 
-.dealCard {
-  margin-top: 36px;
-  background: var(--color-bg-dark-alt);
-  border: 1px solid var(--color-red);
-  border-radius: var(--radius-md);
-  padding: 28px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
-}
-
-.dealHeader {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.dealTitle {
-  font-weight: 600;
-  color: var(--color-white);
-}
-
-.dealPricing {
-  display: flex;
-  align-items: baseline;
-  gap: 8px;
-}
-
-.dealPrice {
-  color: var(--color-red);
-  font-size: var(--text-xl);
-  font-weight: 800;
-}
-
-.dealOld {
-  color: var(--color-text-light);
-  font-size: var(--text-sm);
-  text-decoration: line-through;
-}
-
-.dealDesc {
-  font-size: var(--text-sm);
-  color: rgba(255, 255, 255, 0.45);
-  margin-top: 8px;
-  margin-bottom: 20px;
-}
 
 .visual {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   position: relative;
+  padding-top: 20px;
 }
 
 .imageCard {

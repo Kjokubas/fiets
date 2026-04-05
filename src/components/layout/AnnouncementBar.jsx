@@ -18,6 +18,8 @@ export default function AnnouncementBar() {
       <div className={styles.track}>
         {track}
         {track}
+        {track}
+        {track}
       </div>
     </div>
   );

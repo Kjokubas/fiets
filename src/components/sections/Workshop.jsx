@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import SectionLabel from "@/components/ui/SectionLabel";
 import Button from "@/components/ui/Button";
 import useInView from "@/hooks/useInView";
@@ -26,21 +27,9 @@ export default function Workshop() {
             {t.workshop.headline}<br />{t.workshop.headlineLine2}
           </h2>
           <p className={styles.body}>{t.workshop.body}</p>
-          <Button variant="secondary" size="md">{t.workshop.readMore}</Button>
-
-          <div className={styles.dealCard}>
-            <div className={styles.dealHeader}>
-              <span className={styles.dealTitle}>{t.workshop.dealTitle}</span>
-              <div className={styles.dealPricing}>
-                <span className={styles.dealPrice}>€59</span>
-                <span className={styles.dealOld}>€89</span>
-              </div>
-            </div>
-            <p className={styles.dealDesc}>{t.workshop.dealDesc}</p>
-            <a href="https://www.google.com/maps/search/?api=1&query=2e+Middellandstraat+28,+3021+BP+Rotterdam" target="_blank" rel="noopener noreferrer">
-              <Button variant="primary" size="md">{t.workshop.dealCta}</Button>
-            </a>
-          </div>
+          <Link href="/over-ons">
+            <Button variant="secondary" size="md">{t.workshop.readMore}</Button>
+          </Link>
         </div>
 
         <div className={styles.visual} ref={ref}>
@@ -69,6 +58,7 @@ export default function Workshop() {
             ))}
           </div>
         </div>
+
       </div>
     </section>
   );

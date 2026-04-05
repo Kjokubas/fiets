@@ -83,19 +83,47 @@ const nl = {
     Mountainbike: "Mountainbike",
   },
 
+  // Workshop Service
+  workshopService: {
+    label: "Werkplaats",
+    headline: "Professioneel fietsonderhoud",
+    subtitle: "Van een lekke band tot een complete revisie. Onze ervaren monteurs staan 7 dagen per week voor u klaar.",
+    features: [
+      { title: "Alle merken welkom", desc: "Of het nu een stadsfiets, e-bike of kinderfiets is, wij repareren en onderhouden alle merken en modellen." },
+      { title: "Klaar terwijl u wacht", desc: "De meeste reparaties zijn binnen 30-60 minuten afgerond. U hoeft niet lang te wachten op uw fiets." },
+      { title: "Garantie op reparaties", desc: "Op al ons werk zit garantie. Wij staan achter de kwaliteit van onze reparaties en onderdelen." },
+    ],
+  },
+
   // About Us
   workshop: {
     label: "Over Ons",
     headline: "Uw fietsspecialist op de",
     headlineLine2: "2e Middellandstraat.",
-    body: "Al jaren dé fietsenwinkel van Rotterdam-West. Met persoonlijk advies, een breed assortiment en een eigen werkplaats die 7 dagen per week draait, zorgen wij ervoor dat u altijd goed op weg bent.",
-    dealTitle: "Werkplaats",
+    body: "Al meer dan 5 jaar bent u welkom bij Fietsspecialist Rotterdam in het hart van het Middelland. Wat begon als een kleine buurtwinkel is uitgegroeid tot de meest complete fietsenwinkel van Rotterdam-West met meer dan 3.000 producten, een eigen werkplaats die 7 dagen per week draait, en een team dat fietsen ademt.\n\nWij werken rechtstreeks met fabrikanten als Daily Dutch, Altec, Cortina, Gazelle en meer. Daardoor kunnen wij scherpe prijzen bieden zonder in te leveren op kwaliteit of service. Bij ons betaalt u geen merk-opslag, alleen eerlijke prijzen voor goede fietsen.",
+    dealBadge: "Meest gekozen",
+    dealTitle: "Onderhoudsbeurt",
     dealDesc: "Van een lekke band tot een complete revisie, alle merken, vaak binnen 30-60 minuten.",
-    dealCta: "Toon op de kaart",
+    dealCta: "Afspraak maken",
+    directionsCta: "Routebeschrijving",
+    dealChecklist: [
+      "Ketting spannen en smeren",
+      "Versnelling afstellen",
+      "Banden op spanning brengen",
+      "Remmen afstellen",
+      "Verlichting controleren",
+      "Boutjes en moertjes nakijken",
+    ],
     readMore: "Lees meer",
     stat1Label: "Jaren ervaring",
     stat2Label: "Tevreden klanten",
     stat3Label: "Fietsen op voorraad",
+  },
+
+  // Brands
+  brands: {
+    label: "Onze Merken",
+    headline: "Waar wij mee werken",
   },
 
   // Mega menu

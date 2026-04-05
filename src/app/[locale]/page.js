@@ -3,11 +3,14 @@ import Hero from "@/components/sections/Hero";
 import TrustBar from "@/components/sections/TrustBar";
 import Categories from "@/components/sections/Categories";
 import FeaturedBikes from "@/components/sections/FeaturedBikes";
+import WorkshopService from "@/components/sections/WorkshopService";
 import Workshop from "@/components/sections/Workshop";
 import StatsCounter from "@/components/sections/StatsCounter";
+import BrandsMarquee from "@/components/sections/BrandsMarquee";
 import Testimonials from "@/components/sections/Testimonials";
 import Newsletter from "@/components/sections/Newsletter";
 import Footer from "@/components/layout/Footer";
+import MobileCTA from "@/components/ui/MobileCTA";
 
 export default function Home() {
   return (
@@ -16,14 +19,17 @@ export default function Home() {
       <main>
         <Hero />
         <TrustBar />
-        <Categories />
-        <FeaturedBikes />
-        <Workshop />
         <StatsCounter />
+        <Categories />
+        <BrandsMarquee />
+        <FeaturedBikes />
+        <WorkshopService />
+        <Workshop />
         <Testimonials />
         <Newsletter />
       </main>
       <Footer />
+      <MobileCTA />
     </>
   );
 }

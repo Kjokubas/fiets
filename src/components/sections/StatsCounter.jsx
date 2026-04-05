@@ -1,44 +1,52 @@
 "use client";
 
-import { useEffect, useState, useRef } from "react";
-import useInView from "@/hooks/useInView";
+import { useEffect, useState, useRef, useCallback } from "react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import styles from "./StatsCounter.module.css";
 
-function AnimatedCounter({ target, suffix, suffixRed, isActive }) {
+function AnimatedCounter({ target, suffix = "", suffixRed = false, duration = 2000 }) {
   const [count, setCount] = useState(0);
-  const frameRef = useRef(null);
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const ref = useRef(null);
+
+  const animate = useCallback(() => {
+    const start = performance.now();
+    const step = (now) => {
+      const elapsed = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 4);
+      setCount(Math.floor(eased * target));
+      if (progress < 1) {
+        requestAnimationFrame(step);
+      } else {
+        setCount(target);
+      }
+    };
+    requestAnimationFrame(step);
+  }, [target, duration]);
 
   useEffect(() => {
-    if (!isActive) return;
+    const el = ref.current;
+    if (!el) return;
 
-    const duration = 2000;
-    const startTime = performance.now();
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasAnimated) {
+          setHasAnimated(true);
+          animate();
+          observer.unobserve(el);
+        }
+      },
+      { threshold: 0.3 }
+    );
 
-    function easeOutQuart(t) {
-      return 1 - Math.pow(1 - t, 4);
-    }
-
-    function animate(now) {
-      const elapsed = now - startTime;
-      const progress = Math.min(elapsed / duration, 1);
-      const eased = easeOutQuart(progress);
-      setCount(Math.round(eased * target));
-
-      if (progress < 1) {
-        frameRef.current = requestAnimationFrame(animate);
-      }
-    }
-
-    frameRef.current = requestAnimationFrame(animate);
-    return () => {
-      if (frameRef.current) cancelAnimationFrame(frameRef.current);
-    };
-  }, [isActive, target]);
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [animate, hasAnimated]);
 
   return (
-    <span className={styles.number}>
-      {count}
+    <span className={styles.number} ref={ref}>
+      {count.toLocaleString("nl-NL")}
       {suffix && (
         <span className={suffixRed ? styles.suffixRed : styles.suffix}>{suffix}</span>
       )}
@@ -47,7 +55,6 @@ function AnimatedCounter({ target, suffix, suffixRed, isActive }) {
 }
 
 export default function StatsCounter() {
-  const { ref, isInView } = useInView();
   const { t } = useLanguage();
 
   const stats = [
@@ -60,14 +67,13 @@ export default function StatsCounter() {
   return (
     <section className={styles.section}>
       <div className="container">
-        <div className={styles.row} ref={ref}>
+        <div className={styles.row}>
           {stats.map((stat) => (
             <div key={stat.label} className={styles.item}>
               <AnimatedCounter
                 target={stat.target}
                 suffix={stat.suffix}
                 suffixRed={stat.suffixRed}
-                isActive={isInView}
               />
               <span className={styles.label}>{stat.label}</span>
             </div>

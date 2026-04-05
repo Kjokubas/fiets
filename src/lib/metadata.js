@@ -53,6 +53,18 @@ export function getLocalBusinessSchema() {
     priceRange: "€ - €€€",
     currenciesAccepted: "EUR",
     paymentAccepted: "Cash, Credit Card, Debit Card",
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: 51.9171,
+      longitude: 4.4559,
+    },
+    image: "https://fietsspecialistrotterdam.nl/unnamed.webp",
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.6",
+      reviewCount: "320",
+      bestRating: "5",
+    },
     areaServed: {
       "@type": "City",
       name: "Rotterdam",

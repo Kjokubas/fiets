@@ -83,19 +83,47 @@ const en = {
     Mountainbike: "Mountain Bike",
   },
 
+  // Workshop Service
+  workshopService: {
+    label: "Workshop",
+    headline: "Professional bike maintenance",
+    subtitle: "From a flat tire to a complete overhaul. Our experienced mechanics are ready for you 7 days a week.",
+    features: [
+      { title: "All brands welcome", desc: "Whether it's a city bike, e-bike or kids bike, we repair and maintain all brands and models." },
+      { title: "Ready while you wait", desc: "Most repairs are completed within 30-60 minutes. No long waits for your bike." },
+      { title: "Warranty on repairs", desc: "All our work comes with a warranty. We stand behind the quality of our repairs and parts." },
+    ],
+  },
+
   // About Us
   workshop: {
     label: "About Us",
     headline: "Your bike specialist on",
     headlineLine2: "2e Middellandstraat.",
-    body: "For years the go-to bike shop in Rotterdam-West. With personal advice, a wide range of bikes, and our own workshop open 7 days a week, we make sure you're always on your way.",
-    dealTitle: "Workshop",
+    body: "For over 5 years, Fietsspecialist Rotterdam has been welcoming you in the heart of Middelland. What started as a small neighbourhood shop has grown into the most complete bike store in Rotterdam-West with over 3,000 products, our own workshop open 7 days a week, and a team that lives and breathes cycling.\n\nWe work directly with manufacturers like Daily Dutch, Altec, Cortina, Gazelle and more. This allows us to offer sharp prices without compromising on quality or service. No brand markups here, just fair prices for great bikes.",
+    dealBadge: "Most popular",
+    dealTitle: "Maintenance Service",
     dealDesc: "From a flat tire to a complete overhaul, all brands, usually within 30-60 minutes.",
-    dealCta: "Show on the map",
+    dealCta: "Book appointment",
+    directionsCta: "Get directions",
+    dealChecklist: [
+      "Chain tightening and lubrication",
+      "Gear adjustment",
+      "Tire pressure check",
+      "Brake adjustment",
+      "Light inspection",
+      "Bolts and nuts check",
+    ],
     readMore: "Read more",
     stat1Label: "Years of experience",
     stat2Label: "Happy customers",
     stat3Label: "Bikes in stock",
+  },
+
+  // Brands
+  brands: {
+    label: "Our Brands",
+    headline: "What we work with",
   },
 
   // Mega menu

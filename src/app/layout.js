@@ -1,4 +1,5 @@
 import { Plus_Jakarta_Sans, Playfair_Display, Dancing_Script } from "next/font/google";
+import { getLocalBusinessSchema } from "@/lib/metadata";
 import "./globals.css";
 import "./animations.css";
 
@@ -65,6 +66,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="nl" className={`${plusJakartaSans.variable} ${playfairDisplay.variable} ${dancingScript.variable}`}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(getLocalBusinessSchema()) }}
+        />
+      </head>
       <body suppressHydrationWarning>
         {children}
       </body>
