@@ -136,7 +136,18 @@
 
 @media (max-width: 767px) {
   .slide {
-    width: 300px;
+    width: calc(100vw - 64px);
+  }
+
+  .track {
+    padding: 0 24px 4px;
+    gap: 16px;
+    scroll-padding-left: 24px;
+  }
+
+  .trackWrapper::before,
+  .trackWrapper::after {
+    display: none;
   }
 
   .header {
